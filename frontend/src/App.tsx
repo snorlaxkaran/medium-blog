@@ -13,6 +13,7 @@ function App() {
           {/* Sign in route */}
           <Route path="/signin" element={<Signin />} />
           {/* Sign up route */}
+          <Route path="/" element={<Signup />} />
           <Route path="/signup" element={<Signup />} />
           {/* Get a singler blog */}
           <Route path="/blog/:id" element={<Blog />} />
