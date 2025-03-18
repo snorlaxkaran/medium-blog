@@ -1,11 +1,8 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Avatar } from "./BlogsCard";
 import { Pencil } from "lucide-react";
-import { useBlog } from "../hooks";
 
-export const Appbar = () => {
-  const { id } = useParams();
-  const { blog } = useBlog({ id: id || "" });
+export const Appbar = ({ id }: { id: string }) => {
   return (
     <div className="flex justify-between items-center p-4 border-b border-slate-200">
       <div>
@@ -21,7 +18,7 @@ export const Appbar = () => {
           {" "}
           <Pencil className="w-4 h-4" /> Write
         </Link>
-        <Avatar authorName={blog?.author.name || ""} size="w-9 h-9" />
+        <Avatar authorName={id} size="w-9 h-9" />
       </div>
     </div>
   );

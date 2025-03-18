@@ -15,7 +15,7 @@ export const Blog = () => {
 
   return (
     <>
-      <Appbar />
+      <Appbar id={blog?.author.name || ""} />
 
       <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto my-20">
         <div className=" flex items-center justify-center">
